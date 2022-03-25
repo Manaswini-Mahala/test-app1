@@ -29,7 +29,7 @@ import {
   Switch,
   Route,
   Link,
-  
+
 } from "react-router-dom";
 
 
@@ -48,31 +48,34 @@ function App() {
 
           <Switch>
 
-            <Route exact path="/" ><Auth /></Route>
+            <Route exact path="/" >
+              <Auth />
+            </Route>
             <Route exact path="/home"><Home /></Route>
             <Route exact path="/about" ><About /></Route>
-            {/* <Route exact path="/savings" component={<Savings />} />
-            <Route exact path="/expenses" component={<Expenses />} />
-            <Route exact path="/investments" component={<Investments />} />
-            <Route exact path="/account" component={<Account />} />
-            <Route exact path="/changeaccountdetails" component={<ChangeAccountDetails />} />
-            <Route exact path="/deactivateaccount" component={<DeactivateAccount />} />
-            <Route exact path="/deleteaccount" component={<DeleteAccount />} />
-            <Route exact path="/accountdeactivated" component={<AccountDeactivated />} />
-            <Route exact path="/accountdeleted" component={<AccountDeleted />} />
-            <Route exact path="/changename" component={<ChangeName />} />
-            <Route exact path="/changepassword" component={<ChangePassword />} />
-            <Route exact path="/changeemail" component={<ChangeEmail />} />
-            <Route exact path="/namechanged" component={<NameChanged />} />
-            <Route exact path="/passwordchanged" component={<PasswordChanged />} />
-            <Route exact path="/emailchanged" component={<EmailChanged />} /> */}
             
-            
-            
-            
-            <Route component={<Error />} />
-            
-           
+            <Route exact path="/savings"> <Savings /> </Route>
+            <Route exact path="/expenses"> <Expenses /> </Route>
+            <Route exact path="/investments"><Investments /> </Route>
+            <Route exact path="/account"><Account /> </Route>
+            <Route exact path="/changeaccountdetails"><ChangeAccountDetails /> </Route>
+            <Route exact path="/deactivateaccount"><DeactivateAccount /> </Route>
+            <Route exact path="/deleteaccount"><DeleteAccount /> </Route>
+            <Route exact path="/accountdeactivated"><AccountDeactivated /> </Route>
+            <Route exact path="/accountdeleted"><AccountDeleted /> </Route>
+            <Route exact path="/changename"><ChangeName/> </Route>
+            <Route exact path="/changepassword"><ChangePassword /> </Route>
+            <Route exact path="/changeemail"><ChangeEmail /> </Route>
+            <Route exact path="/namechanged"><NameChanged /> </Route>
+            <Route exact path="/passwordchanged"><PasswordChanged /> </Route>
+            <Route exact path="/emailchanged"><EmailChanged /> </Route>
+
+
+
+
+            {/* <Route><Error />} > */}
+
+
           </Switch>
 
         </Router>

@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
     Redirect,
     Link,
     withRouter
 } from "react-router-dom";
 
-export const Component = withRouter(({ history, location }) =>{
+//export const Component = withRouter(({ history, location }) =>{
 
-})
+//})
 
 class Auth extends Component {
 
@@ -16,7 +16,8 @@ class Auth extends Component {
 
         super()
         this.state = {
-            isRegister: false
+            isRegister: false,
+            errorMsg:''
         }
     }
 
@@ -36,6 +37,11 @@ class Auth extends Component {
 
             })
 
+        })
+        .catch((err)=>{
+            this.setState({
+                errorMsg:'Invalid Credentials'
+            })
         })
         //         //alert("login called")
     }
@@ -84,6 +90,7 @@ class Auth extends Component {
 
 
                             <button onClick={() => this.login()}>Login</button>
+                            <div style={{color:'red'}}>{this.state.errorMsg}</div>
 
                             <br />
                             <br />
@@ -135,4 +142,4 @@ class Auth extends Component {
     }
 }
 
-export default Auth;
+export default withRouter(Auth);
